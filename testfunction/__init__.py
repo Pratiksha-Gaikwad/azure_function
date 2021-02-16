@@ -9,7 +9,7 @@ import azure.functions as func
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
     name = req.params.get('name')
-    secret = os.getenv('mysecretname', 'Could not find a secret')
+#     secret = os.getenv('mysecretname', 'Could not find a secret')
     # url = 'https://test-service-function.azurewebsites.net/api/testfunction?'
     # response = requests.post(url, data=post_fields, timeout=timeout)
     # print("Response time:",response.elapsed.total_seconds())
@@ -25,7 +25,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     if name:
         return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully .")
     else:
-        return func.HttpResponse(f"This HTTP triggered function executed successfully from git source code with {secret}",
+        return func.HttpResponse(f"This HTTP triggered function executed successfully from git source code with {name}",
 
              status_code=200
         )

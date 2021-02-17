@@ -25,7 +25,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     if name:
         return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully .")
     else:
-        return func.HttpResponse(f"This HTTP triggered function executed successfully from git source code with {name}",
+        return func.HttpResponse(f"The new build created.",
 
              status_code=200
         )

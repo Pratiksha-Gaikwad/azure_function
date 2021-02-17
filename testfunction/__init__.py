@@ -25,7 +25,4 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     if name:
         return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully .")
     else:
-        return func.HttpResponse(f"The new build created.",
-
-             status_code=200
-        )
+        return func.HttpResponse(f"The new build created for every new commit.",status_code=200)

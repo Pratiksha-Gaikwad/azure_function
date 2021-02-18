@@ -23,6 +23,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             name = req_body.get('name')
 
     if name:
-        return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully .")
+        return func.HttpResponse(f"Hello, {name}. This function triggered executed successfully .")
     else:
         return func.HttpResponse(f"The new Build created for every new commit.",status_code=200)
